@@ -3,22 +3,35 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  height: 2000px;
+  position: relative;
 }
 
+.dynamic-header {
+  background: #544844;
+  height: 2.5rem;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+
 .header-1 {
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: yellow;
+  position: sticky;
+  top: 0;
+  margin: 0 1.8rem;
 }
 
 .header-2 {
   display: grid;
-  grid-template-columns: 1fr 600px 1fr;
+  grid-template-columns: 1fr 33.3rem 1fr;
   height: 96px;
+  max-width: 1080px;
+  margin-left: auto; 
 }
 
+
 .header-left {
-  background-color: lightgoldenrodyellow;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -28,20 +41,20 @@ body {
   width: 129.28px;
 }
 .header-middle {
-  background-color: lightcoral;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .product-cat {
-  cursor: default;
+  cursor: pointer;
 }
 
 .product-cat img {
   transition: transform .3s ease-in-out;
   transform-origin: center;
   height: 6px;
+  width: 7px;
 }
 
 .product-cat:hover img {
@@ -50,9 +63,8 @@ body {
 
 
 .header-right {
-  background-color: lightgoldenrodyellow;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
 }
 
@@ -63,26 +75,25 @@ body {
 }
 
 .header-right img {
-  height: 20px;
+  height: 1.2rem;
+  padding: 8px;
 }
 
 .money-and-shopping-item {
   display: flex;
   align-items: center ;
+  padding-left: 10px;
 }
 
 .shopping-bag-bag {
-  height: 27px;
-  width: 27px;
+  height: 1.6rem;
+  width: 1.6rem;
   border: 1px solid #544844;
   border-radius: 3px 3px 4px 4px;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* border-left: 2px solid #544844;
-  border-bottom: 2px solid #544844; */
-    /* border-left: 2px solid #544844; */
 }
 
 .shopping-bag-handle {
@@ -95,3 +106,20 @@ body {
   right: 8px;
 }
 
+.shopping-bag-button .shopping-bag-bag {
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.shopping-bag-button:hover .shopping-bag-bag {
+  background-color: #544844;
+  color: white;
+}
+
+.shopping-bag-button:hover .shopping-bag-bag .shopping-bag-handle {
+  top: -6px;
+}
+
+.total-amount {
+  cursor: pointer;
+  padding-right: 3px;
+}
