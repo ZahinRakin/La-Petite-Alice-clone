@@ -1,16 +1,27 @@
 body {
   color: #544844;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }
 
-.header-container {
+.header-1 {
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: yellow;
+}
+
+.header-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 600px 1fr;
   height: 96px;
 }
 
 .header-left {
   background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 .business-logo {
   height: 80px;
@@ -18,7 +29,26 @@ body {
 }
 .header-middle {
   background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.product-cat {
+  cursor: default;
+}
+
+.product-cat img {
+  transition: transform .3s ease-in-out;
+  transform-origin: center;
+  height: 6px;
+}
+
+.product-cat:hover img {
+  transform: rotate(180deg);
+}
+
+
 .header-right {
   background-color: lightgoldenrodyellow;
 }
