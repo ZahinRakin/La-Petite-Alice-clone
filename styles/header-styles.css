@@ -15,7 +15,6 @@ body {
   place-items: center;
 }
 
-
 .header-1 {
   position: sticky;
   top: 0;
@@ -26,7 +25,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 33.3rem 1fr;
   height: 96px;
-  max-width: 1080px;
+  max-width: 1200px;
   margin-left: auto; 
 }
 
@@ -122,4 +121,22 @@ body {
 .total-amount {
   cursor: pointer;
   padding-right: 3px;
+  white-space: nowrap;
+}
+
+@media (width < 1000px) {
+  .header-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-middle {
+    display: none;
+  }
+
+  .header-right .total-amount {
+    display: none;
+  }
+
+  .header-right .profile-button {
+    display: none;
+  }
 }
