@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="63.894211mm"
+   height="63.894211mm"
+   viewBox="0 0 63.894211 63.894211"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="magnifying-glass.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     id="g1"
+     inkscape:export-filename="magnifying-glass.svg"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96">
+    <circle
+       style="fill:none;stroke:#544844;stroke-width:6.60074;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path1"
+       cx="25.478485"
+       cy="25.478489"
+       r="22.178118" />
+    <path
+       style="fill:none;stroke:#544844;stroke-width:6.60074;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 41.290663,41.290665 60.593838,60.59384"
+       id="path2" />
+  </g>
+</svg>

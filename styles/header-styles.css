@@ -51,4 +51,47 @@ body {
 
 .header-right {
   background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header-right button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header-right img {
+  height: 20px;
+}
+
+.money-and-shopping-item {
+  display: flex;
+  align-items: center ;
+}
+
+.shopping-bag-bag {
+  height: 27px;
+  width: 27px;
+  border: 1px solid #544844;
+  border-radius: 3px 3px 4px 4px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border-left: 2px solid #544844;
+  border-bottom: 2px solid #544844; */
+    /* border-left: 2px solid #544844; */
+}
+
+.shopping-bag-handle {
+  border: 1px solid #544844;
+  border-radius: 50% 50% 1px 1px;
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  right: 8px;
+}
+
