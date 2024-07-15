@@ -1,24 +1,156 @@
-body {
-  color: #544844;
-  font-size: 16px;
+.dynamic-header {
+  background: #544844;
+  height: 2.5rem;
+  color: white;
+  display: grid;
+  place-items: center;
 }
 
-.header-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 96px;
+.header-1 {
+  position: sticky;
+  top: 0;
+  padding: 0 1.8rem;
+  box-shadow: 0 1px 10px lightgray;
+  z-index: 100;
+  background-color: white;
 }
+
+.header-2 {
+  display: grid;
+  grid-template-columns: 1fr 33.3rem 1fr;
+  height: 96px;
+  max-width: 1200px;
+  margin-left: auto; 
+}
+
 
 .header-left {
-  background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
+
+/*editing the logo*/
 .business-logo {
   height: 80px;
   width: 129.28px;
 }
+
 .header-middle {
-  background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.product-cat {
+  cursor: pointer;
+}
+
+.product-cat img {
+  transition: transform .3s ease-in-out;
+  transform-origin: center;
+  height: 6px;
+  width: 7px;
+}
+
+.product-cat:hover img {
+  transform: rotate(180deg); /*this I learned new. Have to practice*/
+}
+
+/*creating the underline animation*/
+.product-cat-underline {
+  position: relative;
+}
+.product-cat-underline::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 0;
+  background-color: #544844;
+  transition: width 0.3s ease-in;
+}
+.product-cat-underline:hover::after {
+  width: 100%;
+}
+
+
 .header-right {
-  background-color: lightgoldenrodyellow;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.header-right button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header-right img {
+  height: 1.2rem;
+  padding: 8px;
+}
+
+.money-and-shopping-item {
+  display: flex;
+  align-items: center ;
+  padding-left: 10px;
+}
+
+.shopping-bag-bag {
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 1px solid #544844;
+  border-radius: 3px 3px 4px 4px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.shopping-bag-handle {
+  border: 1px solid #544844;
+  border-radius: 50% 50% 1px 1px;
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  right: 8px;
+}
+
+.shopping-bag-button .shopping-bag-bag {
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.shopping-bag-button:hover .shopping-bag-bag {
+  background-color: #544844;
+  color: white;
+}
+
+.shopping-bag-button:hover .shopping-bag-bag .shopping-bag-handle {
+  top: -6px;
+}
+
+.total-amount {
+  cursor: pointer;
+  padding-right: 3px;
+  white-space: nowrap;
+}
+
+@media (width < 1000px) {
+  .header-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-middle {
+    display: none;
+  }
+
+  .header-right .total-amount {
+    display: none;
+  }
+
+  .header-right .profile-button {
+    display: none;
+  }
 }
