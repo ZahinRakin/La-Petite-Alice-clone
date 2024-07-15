@@ -58,7 +58,21 @@
 }
 
 /*creating the underline animation*/
-.product-cat-underline
+.product-cat-underline {
+  position: relative;
+}
+.product-cat-underline::after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 1px;
+  width: 0;
+  background-color: #544844;
+  transition: width 0.3s ease-in;
+}
+.product-cat-underline:hover::after {
+  width: 100%;
+}
 
 
 .header-right {
