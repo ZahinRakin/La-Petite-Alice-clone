@@ -18,7 +18,10 @@ body {
 .header-1 {
   position: sticky;
   top: 0;
-  margin: 0 1.8rem;
+  padding: 0 1.8rem;
+  box-shadow: 0 1px 10px lightgray;
+  z-index: 100;
+  background-color: white;
 }
 
 .header-2 {
@@ -57,7 +60,7 @@ body {
 }
 
 .product-cat:hover img {
-  transform: rotate(180deg);
+  transform: rotate(180deg); /*this I learned new. Have to practice*/
 }
 
 

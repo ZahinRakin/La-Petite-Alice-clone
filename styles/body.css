@@ -1,0 +1,37 @@
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.main-content {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.init-msg-container {
+  background-image: url('../logo/real-picture/woman-picture.jpg');
+  background-size: auto;
+  background-position: center;
+  height: 25rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr 2fr;
+  place-items: center;
+}
+
+.init-msg-container p,
+.init-msg-container h1{
+  color: white;
+  text-align: center;
+}
+
+.link-to-sale-site a {
+  color: white;
+  font-size: 3rem;
+}
+
+.init-msg-container button {
+  padding: .8rem;
+  font-size: 0.8rem;
+}
