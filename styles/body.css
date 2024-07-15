@@ -1,3 +1,10 @@
+body {
+  color: #544844;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -34,4 +41,111 @@ button {
 .init-msg-container button {
   padding: .8rem;
   font-size: 0.8rem;
+}
+
+.shopping-catagory {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  position: relative;
+  text-align: center;
+  height: 17%;
+}
+
+.catagory-text {
+  color: white;
+  font-size: 1.3rem;
+  position: relative;
+  top: 50%;
+}
+
+.catagory-baby,
+  .catagory-women,
+      .catagory-men,
+        .catagory-homewear{
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
+}
+
+.catagory-baby {
+  background-image: url('../logo/real-picture/children.jpg');
+}
+
+.catagory-women {
+  background-image: url('../logo/real-picture/woman.jpg');
+}
+
+.catagory-men {
+  background-image: url('../logo/real-picture/men.jpg');
+}
+
+.catagory-homewear {
+  background-image: url('../logo/real-picture/homewear.jpg');
+}
+
+@media (width < 800px) {
+.shopping-catagory {
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+.paragraph-container {
+  text-align: center;
+}
+
+.paragraph-1-title {
+  font-size: 1rem;
+}
+
+.paragraph-1 {
+  font-size: 1.8rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 17rem 1fr 1fr;
+}
+
+.products .container .product-picture {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.products .container .product-picture img{
+  width: 100%;
+}
+
+@media (width < 1000px) {
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.owner-family {
+  text-align: center;
+  margin-top: 5rem;
+}
+.owner-family .title {
+  font-size: 1rem;
+}
+.owner-family .passage {
+  font-size: 1.5rem;
+}
+.read-more-button {
+  margin-top: 2rem;
+  border: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  margin-bottom: 5rem;
 }
