@@ -9,7 +9,6 @@
 .header-1 {
   position: sticky;
   top: 0;
-  padding: 0 1.8rem;
   box-shadow: 0 1px 10px lightgray;
   z-index: 100;
   background-color: white;
@@ -17,12 +16,35 @@
 
 .header-2 {
   display: grid;
-  grid-template-columns: 1fr 33.3rem 1fr;
   height: 96px;
   max-width: 1200px;
   margin-left: auto; 
 }
+/* working with the hamburger menu... */
+.header-particular-scenario  {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
 
+
+.header-particular-scenario > button > .bar{
+  background-color: #544844;
+  /* background-color: red; */
+  height: 2px;
+  width: 1.5rem;
+  display: block;
+}
+
+.header-particular-scenario > button {
+  background-color: transparent;
+  /* border: 1px solid #544844; */
+  border-radius: 15%;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .4rem; 
+}
 
 .header-left {
   display: flex;
@@ -138,9 +160,25 @@
   white-space: nowrap;
 }
 
-@media (width < 1000px) {
+@media (width > 1000px) {
+  .header-1 {
+    padding: 0 1.8rem;
+  }
+  .header-2{
+    grid-template-columns: 1fr 33.3rem 1fr;
+  }
+  .header-particular-scenario{
+    display: none;
+  }
+}
+
+@media (width <= 1000px) {
+  .header-1 {
+    padding: 0 1rem;
+  }
   .header-2 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 70px;
   }
   .header-middle {
     display: none;
@@ -152,5 +190,11 @@
 
   .header-right .profile-button {
     display: none;
+  }
+  .business-logo{
+    height: 70%;
+  }
+  .header-left {
+    justify-content: center;
   }
 }
