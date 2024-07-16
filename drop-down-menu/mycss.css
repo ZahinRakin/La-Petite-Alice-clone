@@ -1,0 +1,35 @@
+body {
+  background: lightslategray;
+}
+
+.container {
+  list-style: none;
+  font-size: 2rem;
+}
+
+.container .navigation .navigation-option {
+  display: inline-block;
+  margin-right: 4rem;
+  position: relative;
+}
+
+.container .navigation .navigation-option .navigation-option-choices {
+  position: absolute;
+  list-style: none;
+  left: 0;
+  background-color: darkgreen;
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.container .navigation .navigation-option:hover .navigation-option-choices {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.container .navigation .navigation-option .navigation-option-choices li a{
+  color: lightpink;
+  text-decoration: none;
+  white-space: nowrap;
+}

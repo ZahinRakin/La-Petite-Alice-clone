@@ -66,16 +66,74 @@
 
 .product-cat {
   cursor: pointer;
+  position: relative;
 }
 
-.product-cat img {
+.container {
+  position: absolute;
+  top: 100%;
+  left: -300px;
+ 
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: max-content;
+  background-color: lightpink;
+  /* text-wrap: nowrap; */
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-in;
+  padding: 20px 0;
+}
+
+.container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container ul {
+  list-style: none;
+  text-align: left;
+  line-height: 1.5rem;
+}
+/* working with effect of showing the dropdown upon hover. */
+  .product-cat:hover .container {
+    pointer-events: auto;
+    opacity: 1;
+  }
+/*  */
+
+/* working with the columns line */
+.container .description-column {
+  border-right: 1px solid #544844;
+  padding-right: 10px;
+}
+.container .description-column:last-child {
+  border-right: none;
+}
+
+.title-picture {
+    display: grid;
+    grid-template-rows: 35% 30% 1fr;
+    place-items: center;
+}
+
+.title-picture .child-ddown { /*image is not resizing*/
+  height: 100%;
+  /* padding-left: 10px; */
+  /* object-fit: cover; */
+  /* height: ; */
+}
+
+
+.product-cat .dropdown-icon {
   transition: transform .3s ease-in-out;
   transform-origin: center;
   height: 6px;
   width: 7px;
 }
 
-.product-cat:hover img {
+.product-cat:hover .dropdown-icon {
   transform: rotate(180deg); /*this I learned new. Have to practice*/
 }
 
@@ -159,6 +217,7 @@
   padding-right: 3px;
   white-space: nowrap;
 }
+
 
 @media (width > 1000px) {
   .header-1 {
